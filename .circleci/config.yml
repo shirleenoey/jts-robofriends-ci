@@ -16,19 +16,10 @@ jobs:
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
-      - checkout
-      - run:
-          command: echo "npm installing"
-          name: Run tests
-      - run:
-          command: npm install
-          name: installing npm
-      - run:
-          command: CI=true npm run build
-          name: running build    
-      # - run: echo "npm installing"
-      # - run: npm install
-      # - run: CI=true npm run build
+      - checkout      
+      - run: echo "npm installing"
+      - run: npm install
+      - run: CI=true npm run build
   test:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
