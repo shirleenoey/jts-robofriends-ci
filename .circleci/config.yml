@@ -9,7 +9,7 @@ jobs:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
-      - image: circleci/node:8.9
+      - image: cimg/base:stable
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
@@ -21,17 +21,17 @@ jobs:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
-      - image: circleci/node:8.9
+      - image: cimg/base:stable
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
       - checkout
       - run: echo "testing stuff"
       - run: npm install
-      - run: npm run test
+      - run: npm test
   hithere:
     docker:
-      - image: circleci/node:8.9
+      - image: cimg/base:stable
     steps:
       - checkout
       - run: echo "Hi there"
